@@ -15,15 +15,15 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-    @Singleton
     @Provides
+    @Singleton
     fun provideOkHttp() : OkHttpClient{
         return OkHttpClient.Builder()
             .build()
     }
 
-    @Singleton
     @Provides
+    @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BODY
