@@ -24,7 +24,6 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    @Named("loggingInterceptor")
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BODY
